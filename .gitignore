@@ -1,0 +1,16 @@
+# Python
+__pycache__
+*.pyc
+
+# Django
+**/migrations
+!**/migrations/__init__.py
+
+# IDE
+.vscode
+.idea
+
+# Misc
+**/media
+venv
+*.drawio
