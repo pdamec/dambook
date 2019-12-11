@@ -36,15 +36,16 @@ STANDARD_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
 ]
 
 THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
-    'library',
-    'feed',
+    'library.apps.LibraryConfig',
+    'feed.apps.FeedConfig',
+    'bookworms.apps.BookwormsConfig',
 ]
 
 INSTALLED_APPS = STANDARD_APPS + THIRD_PARTY_APPS + PROJECT_APPS
