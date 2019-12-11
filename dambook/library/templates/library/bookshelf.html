@@ -2,20 +2,24 @@
 
 {% block content %}
     <h1>My Bookshelf</h1>
-
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Cover</th>
-        </tr>
-        {% for book in bookshelf %}
+    
+    {% if bookshelf %}
+        <table>
             <tr>
-                <td>{{ book.title }}</td>
-                <td>{{ book.author }}</td>
-                <td>{{ book.cover }}</td>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Cover</th>
             </tr>
-        {% endfor %}
-    </table>
+            {% for book in bookshelf %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.cover }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <div>No books in your Bookshelf yet.</div>
+    {% endif %}
         
 {% endblock content %}

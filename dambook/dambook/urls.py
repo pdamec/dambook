@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from bookworms import views as bookworm_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('library/', include('library.urls'))
+    path('library/', include('library.urls')),
+    path('register/', bookworm_views.register, name='bookworms-register'),
 ]
